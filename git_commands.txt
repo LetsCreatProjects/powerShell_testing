@@ -17,6 +17,10 @@ git add {specific file to truck}
 //if you want to add all file then
 2. git add .
 
-git commit -m "commit test"
+//this is saves code loclay
+git commit -m "commit test" 
+
+//save the changes into linked repositories
+git push
 
 
