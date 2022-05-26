@@ -24,4 +24,21 @@ git commit -m "commit test"
 git push
 
 
-test
+//the opereation that i am doing on gui in vscode to push changes to linked repositories
+    git add .
+    git commit -m "test"
+    git push
+
+
+   61  git init
+   62  git status
+   63  git add .
+   64  git commit -m "Created readme file" -m "for testing porpuse"
+   65  git push origin main
+   66  git remote add origin https://github.com/LetsCreatProjects/git_test.git
+   67  git remote -v
+   68  git push -u origin main
+   69  git push origin main
+   70  git push -u origin main
+   71  git push -u origin master
+   72  history

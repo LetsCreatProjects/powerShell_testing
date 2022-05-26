@@ -54,7 +54,10 @@
 # # ----------------------------------------if path exists
 
 # # # if path exists
-# $Folder = '/home/osboxes/repositories/powershell_tests/'
+# $Folder = '/mypath/password.txt'
+
+# $Folder=$Folder.Trim().TrimStart('/')
+
 # # "Test to see if folder [$Folder]  exists"
 # if (Test-Path -Path $Folder) {
 #     "Path exists!"
@@ -72,10 +75,8 @@
 # Write-Output "test"
 # Exit 55
     
-# }
-# foo
+# }# $tmp=$tmp.Trim().TrimEnd('"')
 
-# -----To ping
 # function foo {
 #     Test-Connection 1
         
@@ -148,15 +149,19 @@
 
 
 # /----------------------------------------------
-# # --works---Delete or rebplace 
-$strVal ='.\t.ps1 -f "sdfsdfsdfs"'
-$tmp=$strVal.replace('.\t.ps1 -f "','')
+# # # --works---Delete or rebplace 
+# $strVal ='.\t.ps1 -f "sdfsdfsdfs"'
+# $tmp=$strVal.replace('.\t.ps1 -f "','')
 
-# ---Delete last char if the value of it is: "
-$tmp=$tmp.Trim().TrimEnd('"')
-write-host $tmp
+# # ---Delete last char if the value of it is: "
+# $tmp=$tmp.Trim().TrimEnd('"')
+# write-host $tmp
 # /----------------------------------------------
 
-# # ----content from file to var
-# $content = [IO.File]::ReadAllText("test.txt")
-# Write-Host $content
+# ----content from file to var
+$content = [IO.File]::ReadAllText("mypath/password.txt")
+Write-Host $content
+
+if (!$content)
+{    Write-Host 'Please insert the password inside the file: (the password should contein minimum 10 characters.' -ForegroundColor Red
+}
