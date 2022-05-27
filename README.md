@@ -1,3 +1,3 @@
-# Demo
+Powershell script that validate password.
 
-git some more text
+To see the exit code you can input $LASTEXITCODE in CLI.
